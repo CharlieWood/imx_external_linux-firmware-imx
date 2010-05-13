@@ -3,9 +3,7 @@ ifeq ($(BOARD_HAVE_VPU),true)
 
 LOCAL_PATH := $(call my-dir)
 
-vpu_etc_dir := $(TARGET_OUT)/etc/vpu
-vpu_fw_dir := vpu_fw
-vpu_fw_target := $(vpu_etc_dir)/$(vpu_fw_dir)
+vpu_fw_target := $(TARGET_OUT)/lib/firmware/vpu
 
 soc := $(shell echo "$(BOARD_SOC_TYPE)" | tr [A-Z] [a-z])
 vpu_fw_file := vpu_fw_$(soc).bin
