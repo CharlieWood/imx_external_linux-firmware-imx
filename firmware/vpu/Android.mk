@@ -1,5 +1,6 @@
 
 ifeq ($(BOARD_HAVE_VPU),true)
+ifeq ($(EXCLUDED_CODEC_BUILD),false)
 
 LOCAL_PATH := $(call my-dir)
 
@@ -16,4 +17,5 @@ LOCAL_MODULE_PATH := $(vpu_fw_target)
 LOCAL_SRC_FILES := $(LOCAL_MODULE)
 include $(BUILD_PREBUILT)
 
+endif
 endif
