@@ -6,7 +6,7 @@ LOCAL_PATH := $(call my-dir)
 
 vpu_fw_target := $(TARGET_OUT)/lib/firmware/vpu
 
-soc := $(shell echo "$(BOARD_SOC_TYPE)" | tr [A-Z] [a-z])
+soc := $(shell echo "$(BOARD_SOC_TYPE)" | tr 'A-Z' 'a-z')
 vpu_fw_file := vpu_fw_$(soc).bin
 
 # Firmware
